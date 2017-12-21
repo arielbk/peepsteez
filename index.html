@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blog Template</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="assets/stylesheets/styles.css">
+  </head>
+  <body>
+    <header class="container floatingGroup">
+      <h1 class="logo"><a href="#">PEEPSTEEZ</a></h1>
+      <nav class="mainNav">
+        <ul>
+            <li><a href="#">Home</a></li><!--
+            --><li><a href="#">About</a></li><!--
+            --><li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="social"><a href="#">Social Links</a></nav>
+      <section class="container hero">
+        <h4>Latest News:</h4>
+        <h2>Title of a main hero post</h2>
+      </section>
+      <section class="container mailingList">
+        <form class="newsletter">
+          <h4>Subscribe to our newsletter:</h4>
+          <label for="name"><input type="name" name="name" id="name" placeholder="Your Name"></label>
+          <label for="email"><input type="email" name="email" id="email" placeholder="Your Email"></label>
+          <input class="btn" type="submit" name="submit" value="Subscribe now">
+        </form>
+      </section>
+    </header>
+      <section class="container main floatingGroup">
+        <section class="content">
+          <article class="container">
+            <h3>Heading for an Article</h2>
+            <p>Some information about the article—and perhaps a <a href="#">link to</a> another page could be helpful.</p>
+            <p>Some information about the other article and some more writing.
+              I will also include a blockquote in just a moment—when I actually think of a quote. Well, here's one:
+              <blockquote>The best time to plant a tree was yesterday. The next best time to plant a tree is today.</blockquote>
+              I like it. Plan for the future now. It would have been great to have planned for the future now in the past,
+              but the next best thing is to plan for the future future in the present past.</p>
+              <p>I want to include a form here to practice styling form elements.</p>
+
+          </article>
+          <article class="container">
+            <h3>More text and a Blockquote</h2>
+              <p>Now I'm going to include some more paragraph text, but I'm also going to add in an unordered list so I can play with the styling for that.</p>
+              <p>A couple of the things, apart from layout, I need to think about when styling a website, in no particular order:</p>
+              <ul>
+                  <li>Lists</li>
+                  <li>Links</li>
+                  <li>Form element</li>
+                  <li>Quotes and blockquotes</li>
+              </ul>
+              <p>There's probably a bunch more that I can add.</p>
+          </article>
+
+          <article class="container">
+            <h3>An article with a table in it</h2>
+            <p>This article will contain a table so that I can practice styling tables. I will just write a little bit more text here to fill it out a bit, like a section that introduces the tabular data that is to come. So here we go:</p>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Number Name</th>
+                  <th scope="col">10-Base</th>
+                  <th scope="col">2-Base (Binary)</th>
+                  <th scope="col">16-Base (Hexadecimal)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="tableLeft">Zero</td>
+                  <td class="tableRight">0</td>
+                  <td class="tableRight">0</td>
+                  <td class="tableRight">0</td>
+                </tr>
+                <tr>
+                  <td class="tableLeft">One</td>
+                  <td class="tableRight">1</td>
+                  <td class="tableRight">10</td>
+                  <td class="tableRight">1</td>
+                </tr>
+                <tr>
+                  <td class="tableLeft">Two</td>
+                  <td class="tableRight">2</td>
+                  <td class="tableRight">11</td>
+                  <td class="tableRight">2</td>
+                </tr>
+                <tr>
+                  <td class="tableLeft">Three</td>
+                  <td class="tableRight">3</td>
+                  <td class="tableRight">100</td>
+                  <td class="tableRight">3</td>
+                </tr>
+                <tr>
+                  <td class="tableLeft">...</td>
+                  <td class="tableRight">...</td>
+                  <td class="tableRight">...</td>
+                  <td class="tableRight">...</td>
+                </tr>
+                <tr>
+                  <td class="tableLeft">Nine</td>
+                  <td class="tableRight">9</td>
+                  <td class="tableRight">1010</td>
+                  <td class="tableRight">9</td>
+                </tr>
+                <tr>
+                  <td class="tableLeft">Ten</td>
+                  <td class="tableRight">10</td>
+                  <td class="tableRight">1011</td>
+                  <td class="tableRight">A</td>
+                </tr>
+                <tr>
+                  <td class="tableLeft">Eleven</td>
+                  <td class="tableRight">11</td>
+                  <td class="tableRight">1100</td>
+                  <td class="tableRight">B</td>
+                </tr>
+                <tr>
+                  <td class="tableLeft">Twelve</td>
+                  <td class="tableRight">12</td>
+                  <td class="tableRight">1101</td>
+                  <td class="tableRight">C</td>
+                </tr>
+                <tr>
+                  <td class="tableLeft">Thirteen</td>
+                  <td class="tableRight">13</td>
+                  <td class="tableRight">1110</td>
+                  <td class="tableRight">D</td>
+                </tr>
+                <tr>
+                  <td class="tableLeft">Fourteen</td>
+                  <td class="tableRight">14</td>
+                  <td class="tableRight">1111</td>
+                  <td class="tableRight">E</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <td colspan="4">And keep on keeping on; on and on until the break of dawn, to be specific.</td>
+              </tfoot>
+            </table>
+          </article>
+
+
+
+        </section>
+        <aside class="container">
+          <h3>Sidebar</h3>
+          <p>Blog entries go in the sidebar, as do some other things that take up space and must be accounted for.</p>
+
+          <form action="/input" method="post" class="apply">
+
+            <fieldset class="person">
+              <label>Name: <input type="name" name="name" id="name" placeholder="e.g. John Smith" required></label>
+              <label>Favourite Colour: <input type="color" name="colour" id="color"></label>
+              <label>Telephone: <input type="tel" name="telephone" id="telephone" placeholder="e.g. +64 21 344544" required></label>
+              <label>Email: <input type="email" name="email" id="email" placeholder="e.g. name@domain.com" required></label>
+            </fieldset>
+
+            <fieldset class="cvUpload">
+              <label>C.V. (if applicable): <input type="file" name="cv" id="cv"></label>
+            </fieldset>
+
+            <fieldset class="comment">
+              <label>Comment: <textarea name="comment" id="comment">Leave a comment!</textarea></label>
+            </fieldset>
+
+            <fieldset class="submit">
+              <input class="btn" type="submit" name="submit" value="Submit">
+            </fieldset>
+          </form>
+
+          <p>And here I am, adding a whole lot more to the sidebar so that I can see what it looks like when it gets stretched down vertically.</p>
+
+        </aside>
+      </section>
+    <footer class="container primary-footer floatingGroup">
+      <p>Things that go down the bottom of the page</p>
+      <nav class="footerNav">
+        <ul>
+            <li><a href="#">Home</a></li><!--
+            --><li><a href="#">About</a></li><!--
+            --><li><a href="#">Submissions</a></li><!--
+            --><li><a href="#">Contest</a></li><!--
+            --><li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
