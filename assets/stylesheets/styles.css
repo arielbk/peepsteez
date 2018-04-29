@@ -52,15 +52,14 @@ GENERAL CUSTOM STYLES
 
 body {
   line-height: 1;
-  background: #eee;
+  background: #f2f5f9;
   color: #222;
-  font: 400 14px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 400 14px/22px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4 {
   font-weight: 900;
   font-family: "Oswald", sans-serif;
-  letter-spacing: 0.1em;
 }
 
 h2 { /* so basically the hero text... */
@@ -72,10 +71,13 @@ h2 { /* so basically the hero text... */
 }
 
 h3 {
-  font: 400 1.3em/1em "Oswald", sans-serif;
-  font-size: 1.3em;
+  font-size: 1.5em;
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+.subscribeText {
+  font-size: 1.3em;
 }
 
 footer {
@@ -132,9 +134,9 @@ LAYOUT
 
 header {
   display: block;
-  background: #222;
+  background: #2b2e33;
   width: 100%;
-  height: 200px;
+  height: 220px;
   color: #eee;
   position: relative;
 }
@@ -157,19 +159,23 @@ footer {
 }
 
 .hero {
-  background: linear-gradient(rgba(0,0,0,0) 50%, rgba(10,10,10,0.3)), url(../images/hero_mountain.jpg) top no-repeat;
-  background-size: 100vw;
-  background-clip: padding-box;
+  background: linear-gradient(#aaa 50%, #222);
+  background: #000 url(../images/hero_boxer.jpg) no-repeat top left;
+  background-size: cover;
   width: 100%;
-  height: 280px;
+  height: 340px;
   padding-top: 100px;
 }
 
 .mailingList {
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: center;
   color: #222;
-  background: #ddd;
+  background: #efefef;
   border-top: 1px solid #eee;
   display: block;
+  height: 70px;
   width: 100%;
   position: relative;
 }
@@ -251,9 +257,10 @@ CLEARFIX
   background: linear-gradient(#333, #222)
 }
 
-.mainNav a:hover {
+.mainNav a:hover,
+.mainNav a:focus {
   background: #222;
-  background: linear-gradient(#eee, #222);
+  background: linear-gradient(#444, #222);
 }
 
 .footerNav ul {
@@ -308,7 +315,7 @@ form {
 
 .btn {
   color: #eee;
-  background: #222;
+  background: #2b2e33;
   height: 3.5em;
   width: 10em;
   border-bottom: 1px solid #fff;
@@ -333,6 +340,7 @@ form {
   background: none;
   border: none;
   width: 100%;
+  padding: 5px;
 }
 
 .newsletter h4 {
