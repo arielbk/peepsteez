@@ -108,7 +108,7 @@ q,
 blockquote,
 ul,
 ol {
-  background: #f2f5f9;
+  background: #fff;
   padding: 10px 10px;
   margin: 1.1em 0;
 }
@@ -315,8 +315,10 @@ ARTICLES
   text-transform: uppercase;
 }
 
+.user-icon,
 .calendar-icon {
-  height: 32px;
+  margin: 0 6px 0 18px;
+  height: 16px;
   fill: #222;
 }
 
