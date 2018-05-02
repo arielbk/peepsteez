@@ -61,6 +61,7 @@ $neutralwhite: #eee;
 $black: #222;
 $deepestblack: #000;
 $grey: #444;
+$lightgrey: #999;
 
 body {
   line-height: 1;
@@ -103,7 +104,7 @@ q,
 blockquote,
 ul,
 ol {
-  background: $white;
+  background: #fff;
   padding: 10px 10px;
   margin: 1.1em 0;
 }
@@ -291,11 +292,13 @@ ARTICLES
 }
 .article-info {
   margin-bottom: 2em;
-  color: #999;
+  color: $lightgrey;
   text-transform: uppercase;
 }
+.user-icon,
 .calendar-icon {
-  height: 32px;
+  margin: 0 6px 0 18px;
+  height: 16px;
   fill: $black;
 }
 .btn-more {
