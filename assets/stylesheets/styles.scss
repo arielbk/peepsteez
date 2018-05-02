@@ -1,6 +1,7 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
   License: none (public domain)
 */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,13 +22,11 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
-
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
-
 ol, ul {
   list-style: none;
 }
@@ -35,13 +34,11 @@ ol, ul {
 blockquote, q {
   quotes: none;
 }
-
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: "";
+  content: '';
   content: none;
 }
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -52,28 +49,30 @@ table {
 GENERAL CUSTOM STYLES
 ====================================
 */
+
+$white: #f2f5f9;
+$black: #222;
+$deepestblack: #000;
+$grey: #444;
+
 body {
   line-height: 1;
-  background: #f2f5f9, 20%;
-  color: #222;
+  background: $white, 20%;
+  color: $black;
   font: 400 14px/22px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 h1, h2, h3, h4 {
   font-weight: 900;
   font-family: "Oswald", sans-serif;
 }
-
-h2 {
-  /* so basically the hero text... */
+h2 { /* so basically the hero text... */
   margin-top: 50px;
   font-size: 2.2em;
   text-transform: uppercase;
   line-height: 1.2em;
   width: 45%;
-  text-shadow: 3px -3px 6px #222;
+  text-shadow: 3px -3px 6px $black;
 }
-
 h3 {
   font-size: 1.5em;
   margin-bottom: 1em;
@@ -93,12 +92,12 @@ p {
 
 a {
   text-decoration: none;
-  color: #444;
+  color: $grey;
   border-bottom: 1px dashed black;
 }
 
 a:hover {
-  color: #222;
+  color: $black;
   border-bottom: 1px solid black;
 }
 
@@ -106,7 +105,7 @@ q,
 blockquote,
 ul,
 ol {
-  background: #f2f5f9;
+  background: $white;
   width: 100%;
   padding: 10px 10px;
   margin: 1.1em 0;
@@ -121,54 +120,56 @@ li {
   padding-left: 28px;
 }
 
+
 /*
 ====================================
 LAYOUT
 ====================================
 */
+
 .container {
   display: inline-block;
   box-sizing: border-box;
   margin: inherit auto;
   padding: 20px 45px;
 }
-
 header {
   display: block;
-  background: #222;
+  background: $black;
   width: 100%;
   height: 260px;
-  color: #f2f5f9;
+  color: $white;
   position: relative;
 }
+section {
 
+}
 article {
   width: 100%;
-  margin-top: 44px;
   margin-bottom: 10px;
-  border-bottom: 5px solid #f2f5f9;
+  border-bottom: 5px solid $white;
 }
-
 footer {
   display: block;
-  background: #222;
+  background: $black;
   width: 100%;
-  color: #f2f5f9;
+  color: $white;
 }
-
 .hero {
-  background: #222 url(../images/hero_boxer.jpg) no-repeat top left;
+  background: $black url(../images/hero_boxer.jpg) no-repeat top left;
   background-size: cover;
   width: 100%;
   height: 380px;
   padding-top: 100px;
 }
 
+
 /*
 ====================================
 CLEARFIX
 ====================================
 */
+
 .floatingGroup:before,
 .floatingGroup:after {
   content: "";
@@ -185,6 +186,7 @@ CLEARFIX
 }
 
 /* /CLEARfIX */
+
 .logo {
   position: absolute;
   width: 200px;
@@ -196,74 +198,65 @@ CLEARFIX
   font-size: 1.6em;
   letter-spacing: 0.3em;
   font-weight: lighter;
-  text-shadow: 0px -2px 2px #000;
+  text-shadow: 0px -2px 2px $deepestblack;
+  a {
+    color: $white;
+    text-decoration: none;
+    border: none;
+  }
+  a:hover {
+    color: $deepestblack;
+  }
 }
-.logo a {
-  color: #f2f5f9;
-  text-decoration: none;
-  border: none;
-}
-.logo a:hover {
-  color: #000;
-}
-
 .social {
   float: right;
 }
-
 .dropdown {
   display: inline;
 }
-
 header svg {
-  fill: #444;
+  fill: $grey;
   width: 24px;
   height: 24px;
 }
-
 .burgerIcon {
-  fill: #f2f5f9;
+  fill: $white;
 }
-
 header svg:hover {
-  fill: #f2f5f9;
+  fill: $white;
 }
-
 .burgerIcon:hover {
-  fill: #222;
+  fill: $black;
 }
-
 .socialIcons {
   padding-left: 8px;
 }
-
-.footerNav ul {
-  background: none;
-  float: right;
+.footerNav {
+  ul {
+    background: none;
+    float: right;
+  }
+  li {
+    background: none;
+    display: inline-block;
+  }
+  a {
+    color: $white;
+  }
 }
-.footerNav li {
-  background: none;
-  display: inline-block;
-}
-.footerNav a {
-  color: #f2f5f9;
-}
-
 .main {
   margin: 20px 0 0 0;
   width: 100%;
 }
-
 .content {
   float: left;
   width: 68%;
 }
-
 aside {
   float: right;
   width: 30%;
-  background: #f2f5f9;
-  border-left: 1px solid #444;
+  background: $white;
+  border-left: 1px solid $grey;
   text-align: center;
 }
 
@@ -272,8 +265,9 @@ aside {
 FORMS
 ====================================
 */
+
 form {
-  background: #f2f5f9;
+  background: $white;
   text-align: center;
   width: 80%;
   display: inline-block;
@@ -282,70 +276,64 @@ form {
   padding: 10px 0;
   vertical-align: middle;
 }
-
 .btn {
-  color: #f2f5f9;
-  background: #222;
+  color: $white;
+  background: $black;
   height: 3.5em;
   text-transform: uppercase;
 }
-
 .btn:hover {
-  background: #444;
+  background: $grey;
   cursor: pointer;
 }
-
 .apply {
   margin-bottom: 2em;
-}
-.apply textarea {
+  textarea {
   resize: vertical;
+  }
 }
-
 .mailingList {
   padding-top: 0;
   padding-bottom: 0;
-  color: #222;
-  background: #f4f5f7;
-  border-top: 1px solid #f2f5f9;
+  color: $black;
+  background: desaturate( $white, 20% );
+  border-top: 1px solid $white;
   display: block;
   height: 70px;
   width: 100%;
+  .mail-input {
+    margin-top: 4px;
+    width: 20em;
+    font-size: 1em;
+    padding-right: 12px;
+  }
+  -mail-input:last-child {
+    padding-right: 0;
+  }
+  .btn {
+    float: right;
+    width: 24%;
+  }
 }
-.mailingList .mail-input {
-  margin-top: 4px;
-  width: 20em;
-  font-size: 1em;
-  padding-right: 12px;
-}
-.mailingList -mail-input:last-child {
-  padding-right: 0;
-}
-.mailingList .btn {
-  float: right;
-  width: 24%;
-}
-
 .newsletter {
   background: none;
   border: none;
   width: 100%;
+  h4 {
+    margin-top: 4px;
+    text-align: left;
+    display: inline-block;
+    float: left;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1em;
+  }
+  label {
+    width: 20%;
+    margin-left: 40px;
+    float: left;
+  }
 }
-.newsletter h4 {
-  margin-top: 4px;
-  text-align: left;
-  display: inline-block;
-  float: left;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  line-height: 1em;
-}
-.newsletter label {
-  width: 20%;
-  margin-left: 40px;
-  float: left;
-}
-
 textarea,
 input {
   line-height: 2.5em;
@@ -353,12 +341,10 @@ input {
   width: 100%;
   padding: 0 1em;
 }
-
 label {
   display: inline-block;
   width: 90%;
 }
-
 fieldset {
   padding-bottom: 2em;
 }
@@ -368,35 +354,29 @@ fieldset {
 TABLE STYLING
 ====================================
 */
+
 table {
   width: 100%;
   text-align: center;
 }
-
 th {
-  background: #222;
-  border: 2px solid #222;
-  color: #f2f5f9;
+  background: $black;
+  border: 2px solid $black;
+  color: $white;
   width: 25%;
   height: 3em;
   vertical-align: middle;
 }
-
 td {
-  border: 1px solid #222;
+  border: 1px solid $black;
   padding: 0.5em;
 }
-
 tr:nth-child(even) {
-  background: #f2f5f9;
+  background: $white;
 }
-
 .tableLeft {
   text-align: left;
 }
-
 .tableRight {
   text-align: right;
 }
-
-/*# sourceMappingURL=styles.css.map */
