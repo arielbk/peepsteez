@@ -50,14 +50,21 @@ GENERAL CUSTOM STYLES
 ====================================
 */
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 $white: #f2f5f9;
+$neutralwhite: #eee;
 $black: #222;
 $deepestblack: #000;
 $grey: #444;
 
 body {
   line-height: 1;
-  background: $white, 20%;
+  background: $white;
   color: $black;
   font: 400 14px/22px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -66,7 +73,7 @@ h1, h2, h3, h4 {
   font-family: "Oswald", sans-serif;
 }
 h2 { /* so basically the hero text... */
-  margin-top: 50px;
+  margin-top: 70px;
   font-size: 2.2em;
   text-transform: uppercase;
   line-height: 1.2em;
@@ -74,52 +81,50 @@ h2 { /* so basically the hero text... */
   text-shadow: 3px -3px 6px $black;
 }
 h3 {
-  font-size: 1.5em;
+  font-size: 1.75em;
   margin-bottom: 1em;
 }
-
-.subscribeText {
-  font-size: 1.3em;
-}
-
 footer {
   font-style: italic;
 }
-
 p {
   margin-bottom: 1em;
 }
-
 a {
   text-decoration: none;
   color: $grey;
   border-bottom: 1px dashed black;
 }
-
 a:hover {
   color: $black;
   border-bottom: 1px solid black;
 }
-
 q,
 blockquote,
 ul,
 ol {
   background: $white;
-  width: 100%;
   padding: 10px 10px;
   margin: 1.1em 0;
 }
-
 q, blockquote {
   font-style: italic;
 }
-
 li {
   background: url("../images/arrow.png") 0 50% no-repeat;
   padding-left: 28px;
 }
-
+.btn {
+  color: $white;
+  background: $black;
+  height: 3.5em;
+  text-transform: uppercase;
+  transition: background-color 1s;
+}
+.btn:hover {
+  background: $grey;
+  cursor: pointer;
+}
 
 /*
 ====================================
@@ -128,10 +133,9 @@ LAYOUT
 */
 
 .container {
-  display: inline-block;
   box-sizing: border-box;
   margin: inherit auto;
-  padding: 20px 45px;
+  padding: 20px 32px;
 }
 header {
   display: block;
@@ -146,8 +150,8 @@ section {
 }
 article {
   width: 100%;
-  margin-bottom: 10px;
-  border-bottom: 5px solid $white;
+  margin-bottom: 44px;
+  border-bottom: 5px solid $neutralwhite;
 }
 footer {
   display: block;
@@ -162,7 +166,10 @@ footer {
   height: 380px;
   padding-top: 100px;
 }
-
+.article-img {
+  width: 100%;
+  margin-bottom: 18px;
+}
 
 /*
 ====================================
@@ -175,11 +182,9 @@ CLEARFIX
   content: "";
   display: table;
 }
-
 .floatingGroup:after {
   clear: both;
 }
-
 .floatingGroup {
   clear: both;
   *zoom: 1;
@@ -218,9 +223,11 @@ header svg {
   fill: $grey;
   width: 24px;
   height: 24px;
+  transition: fill .3s ease-out;
 }
 .burgerIcon {
   fill: $white;
+  transition: fill .3s ease-out;
 }
 header svg:hover {
   fill: $white;
@@ -245,12 +252,18 @@ header svg:hover {
   }
 }
 .main {
-  margin: 20px 0 0 0;
+  margin: 260px 0 0 0;
   width: 100%;
 }
 .content {
   float: left;
   width: 68%;
+  text-align: center;
+}
+.article-text {
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: center;
 }
 aside {
   float: right;
@@ -258,6 +271,47 @@ aside {
   background: $white;
   border-left: 1px solid $grey;
   text-align: center;
+}
+
+
+/*
+====================================
+ARTICLES
+====================================
+*/
+
+.photo-icon-wrapper {
+  text-align: center;
+  margin-top: -46px;
+}
+.photo-icon {
+  width: 48px;
+  fill: $black;
+  background: #fff;
+}
+.article-info {
+  margin-bottom: 2em;
+  color: #999;
+  text-transform: uppercase;
+}
+.calendar-icon {
+  height: 32px;
+  fill: $black;
+}
+.btn-more {
+  margin: 2em 0 3em 0;
+  font-size: 1em;
+  color: $black;
+  background: $white;
+  border: 2px solid $neutralwhite;
+  width: 200px;
+}
+.btn-more:hover {
+  background: $grey;
+  color: $white;
+}
+.article-text h3 {
+  text-transform: uppercase;
 }
 
 /*
@@ -270,45 +324,28 @@ form {
   background: $white;
   text-align: center;
   width: 80%;
-  display: inline-block;
   margin: 0 auto;
-  overflow: hidden;
   padding: 10px 0;
-  vertical-align: middle;
 }
-.btn {
-  color: $white;
-  background: $black;
-  height: 3.5em;
-  text-transform: uppercase;
-}
-.btn:hover {
-  background: $grey;
-  cursor: pointer;
-}
-.apply {
-  margin-bottom: 2em;
-  textarea {
-  resize: vertical;
-  }
-}
+
 .mailingList {
   padding-top: 0;
   padding-bottom: 0;
+  margin-bottom: 44px;
   color: $black;
-  background: desaturate( $white, 20% );
+  background: $neutralwhite;
   border-top: 1px solid $white;
   display: block;
   height: 70px;
   width: 100%;
   .mail-input {
+    display: inline-block;
     margin-top: 4px;
-    width: 20em;
     font-size: 1em;
-    padding-right: 12px;
+    margin-right: 12px;
   }
-  -mail-input:last-child {
-    padding-right: 0;
+  .emailnews {
+    margin-right: 0;
   }
   .btn {
     float: right;
@@ -320,7 +357,7 @@ form {
   border: none;
   width: 100%;
   h4 {
-    margin-top: 4px;
+    margin-top: 8px;
     text-align: left;
     display: inline-block;
     float: left;
